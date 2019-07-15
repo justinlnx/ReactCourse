@@ -107,31 +107,31 @@ import sortBy from 'sort-by';
  * 如果你的class component 只有一个 `render` method 的话，你就可以把他refactor成一个
  * functional component
  */
-// function ListContacts (props) {
-//   return (
-//     <ol className="contact-list">
-//       {props.contacts.map((contact) => (
-//         /**
-//          * the reason why we need this `key` prop on a `.map` list:
-//          * because eventually, one of these list item may change,
-//          * by having an unique key attribute on each item, react is
-//          * able to know which item is the list has changed rather than
-//          * recreating that list every time
-//          */
-//         <li key={contact.id} className='contact-list-item'>
-//           <div className='contact-avatar' style={{
-//             backgroundImage: `url(${contact.avatarURL})`
-//           }} />
-//           <div className='contact-details'>
-//             <p>{contact.name}</p>
-//             <p>{contact.email}</p>
-//           </div>
-//           <button className='contact-remove'>Remove</button>
-//         </li>
-//       ))}
-//     </ol>
-//   );
-// }
+function ListContacts (props) {
+  return (
+    <ol className="contact-list">
+      {props.contacts.map((contact) => (
+        /**
+         * the reason why we need this `key` prop on a `.map` list:
+         * because eventually, one of these list item may change,
+         * by having an unique key attribute on each item, react is
+         * able to know which item is the list has changed rather than
+         * recreating that list every time
+         */
+        <li key={contact.id} className='contact-list-item'>
+          <div className='contact-avatar' style={{
+            backgroundImage: `url(${contact.avatarURL})`
+          }} />
+          <div className='contact-details'>
+            <p>{contact.name}</p>
+            <p>{contact.email}</p>
+          </div>
+          <button className='contact-remove'>Remove</button>
+        </li>
+      ))}
+    </ol>
+  );
+}
 
 /**
  * Lesson 3: Add State to Component
