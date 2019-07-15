@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
 import ListContacts from './ListContacts'
-import CreateContact from './CreateContact'
-import * as ContactsAPI from './utils/ContactsAPI'
 
 /** Lesson 1: Pass Data With Props */
 const contacts = [
@@ -54,25 +51,36 @@ class App extends Component {
   //   })
   // }
 
+  // render() {
+  //   return (
+  //     <div>
+  //       {/* Completed component! */}
+  //       <Route exact path='/' render={() => (
+  //         <ListContacts
+  //           onDeleteContact={this.removeContact}
+  //           contacts={this.state.contacts}
+  //         />
+  //       )}/>
+  //       <Route path='/create' render={({ history }) => (
+  //         <CreateContact
+  //           onCreateContact={(contact) => {
+  //             this.createContact(contact)
+  //             history.push('/')
+  //           }}
+  //         />
+  //       )}/>
+  //     </div>
+  //   )
+  // }
+
+
+
+  /**
+   * Lesson 1: Pass Data With Props
+   */
   render() {
     return (
       <div>
-        {/* Completed component! */}
-        {/* <Route exact path='/' render={() => (
-          <ListContacts
-            onDeleteContact={this.removeContact}
-            contacts={this.state.contacts}
-          />
-        )}/>
-        <Route path='/create' render={({ history }) => (
-          <CreateContact
-            onCreateContact={(contact) => {
-              this.createContact(contact)
-              history.push('/')
-            }}
-          />
-        )}/> */}
-        
         {/* Lesson 1: Pass Data With Props */}
         {/* Hellow World */}
         <ListContacts contacts={contacts} />
